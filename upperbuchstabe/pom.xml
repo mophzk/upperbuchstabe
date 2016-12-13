@@ -13,6 +13,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+   
 
     <build>
     <plugins>
@@ -36,21 +38,24 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
-      <scope>test</scope>
+         <scope>test</scope>
     </dependency>
+     <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymock</artifactId>
+      <version>3.1</version>
+      <scope>test</scope>
+</dependency>
   </dependencies>
   
-   <reporting>
+    <reporting>
     <plugins>
-      <plugin>
-      <artifactId>maven-surefire-report-plugin</artifactId>
-        </plugin>
-        <plugin>
-         <artifactId>maven-javadoc-plugin</artifactId>
-        </plugin>
+<plugin>
+<groupId>org.codehaus.mojo</groupId>
+<artifactId>cobertura-maven-plugin</artifactId>
+<version>2.6</version>
+</plugin>
       </plugins>
-   </reporting>
-  
-  
+</reporting>
   
 </project>
